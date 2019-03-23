@@ -200,27 +200,6 @@ Foo.init({
 }, {
   sequelize,
 });
-
-// legacy with `sequelize.define`
-sequelize.define('Foo', {
-  firstname: Sequelize.STRING,
-  lastname: Sequelize.STRING
-}, {
-  getterMethods: {
-    fullName() {
-      return this.firstname + ' ' + this.lastname;
-    }
-  },
-
-  setterMethods: {
-    fullName(value) {
-      const names = value.split(' ');
-
-      this.setDataValue('firstname', names.slice(0, -1).join(' '));
-      this.setDataValue('lastname', names.slice(-1).join(' '));
-    }
-  }
-} );
 ```
 
 
