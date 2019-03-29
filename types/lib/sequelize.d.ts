@@ -674,11 +674,6 @@ export class Sequelize extends Hooks {
   public static afterSync(fn: (options: SyncOptions) => HookReturn): void;
 
   /**
-   * A reference to Sequelize constructor from sequelize. Useful for accessing DataTypes, Errors etc.
-   */
-  public Sequelize: typeof Sequelize;
-
-  /**
    * Final config that is used by sequelize.
    */
   public readonly config: Config;
@@ -1070,7 +1065,7 @@ export class Sequelize extends Hooks {
    *   // Raw query - use spread
    * });
    *
-   * sequelize.query('SELECT...', { type: sequelize.QueryTypes.SELECT }).then(results => {
+   * sequelize.query('SELECT...', { type: QueryTypes.SELECT }).then(results => {
    *   // SELECT query - use then
    * })
    * ```
@@ -1194,7 +1189,6 @@ export class Sequelize extends Hooks {
    * @param options Query Options for authentication
    */
   public authenticate(options?: QueryOptions): Promise<void>;
-  public validate(options?: QueryOptions): Promise<void>;
 
   /**
    * Start a transaction. When using transactions, you should pass the transaction in the options argument
