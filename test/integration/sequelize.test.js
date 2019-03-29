@@ -1202,6 +1202,7 @@ describe(Support.getTestDialectTeaser('Sequelize'), () => {
             Object.keys(customAttributes).forEach(attribute => {
               Object.keys(customAttributes[attribute]).forEach(option => {
                 const optionValue = customAttributes[attribute][option];
+                // eslint-disable-next-line new-cap
                 if (typeof optionValue === 'function' && new optionValue() instanceof DataTypes.ABSTRACT) {
                   expect(Picture.rawAttributes[attribute][option] instanceof optionValue).to.be.ok;
                 } else {
