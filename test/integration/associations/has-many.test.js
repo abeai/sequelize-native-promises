@@ -1494,7 +1494,7 @@ describe(Support.getTestDialectTeaser('HasMany'), () => {
             include: [
               { model: Task, separate: true, include: [{ model: Job, separate: true }] }
             ],
-            group: [['userId']]
+            group: ['userId']
           });
         })
         .then(({ count, rows }) => {
