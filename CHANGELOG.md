@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.6 - 04/24/2019
+
+-   Add retry-as-promised as a file instead of a module to use native promises. [ENG-842](https://abedev.atlassian.net/browse/ENG-842)
+
 ## 1.0.5 - 04/22/2019
 
 -   Removed Promise.AggregateError usage [COV-355](https://abedev.atlassian.net/browse/COV-355)
