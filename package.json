@@ -1,7 +1,7 @@
 {
   "name": "@abeai/sequelize-native-promises",
   "description": "Fork of sequelize that supports native promises giving it 200% increased speed",
-  "version": "1.0.6",
+  "version": "1.1.6",
   "author": "Sascha Depold <sascha@depold.com>",
   "contributors": [
     "Sascha Depold <sascha@depold.com>",
@@ -22,7 +22,7 @@
   "main": "index.js",
   "types": "types",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=4.0.0"
   },
   "files": [
     "lib",
@@ -31,6 +31,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@abeai/node-utils": "^1.1.0",
     "bluebird": "^3.5.0",
     "cls-bluebird": "^2.1.0",
     "debug": "^3.1.0",
@@ -138,10 +139,6 @@
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release"
   },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "license": "MIT",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
